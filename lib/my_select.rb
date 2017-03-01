@@ -5,10 +5,8 @@ def my_select(collection)
  while i < collection.length
    if yield(collection[i])
      selection.push(collection[i])
-     i += 1
-   else
-     i += 1
    end
+     i += 1
  end
  selection
 end
