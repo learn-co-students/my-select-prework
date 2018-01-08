@@ -1,3 +1,18 @@
 def my_select(collection)
- # your code here!
+  i = 0
+  array = []
+
+  while i < collection.length
+    if yield(collection[i]) == true
+      array << collection[i]
+    end
+    i += 1
+  end
+  array
+end
+
+nums = [1, 2, 3, 4]
+
+my_select(nums) do |num|
+  num.even?
 end
