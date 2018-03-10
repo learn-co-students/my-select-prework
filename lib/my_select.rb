@@ -7,10 +7,10 @@ def my_select(array)
     output = []
     i = 0
     while i < array.length
-      if yield(array[i]) == true
-        output.push(array[i])
+      if yield(array[i])
+        output << array[i]
       end
-      i = i + 1
+      i+=1
     end
     output
   end
