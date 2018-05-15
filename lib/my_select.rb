@@ -3,8 +3,8 @@ def my_select(collection)
   new_collection = []
 
   while i < collection.length
-    if yield(collection[i]) == true
-      new_collection.push(yield(collection[i]))
+    if yield(collection[i])==true
+      new_collection.push(yield(collection[i]).values)
       i += 1
     else
       i += 1
