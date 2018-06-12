@@ -1,3 +1,14 @@
+
+require 'pry'
 def my_select(collection)
- # your code here!
+ i = 0
+ 
+ selected = []
+ while i < collection.length
+  if yield(collection[i])
+  selected << collection[i]
+    end
+  i = i + 1
+ end
+ selected
 end
