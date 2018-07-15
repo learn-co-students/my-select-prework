@@ -1,33 +1,35 @@
-# def my_select(collection)
-#  # your code here!
-#   empty_array=[]
-#
-#   i=0
-#   while i < collection.length
-#     empty_array << yield(collecion[i])
-#     i += 1
-#   end
-#
-#   empty_array.compact
-# end
-#
-# my_select(nums) do |num|
-#   if num.even?
-#     num
-#   end
-# end
-
-#nums = [1, 2, 3, 4, 5]
 
   def my_select(array)
-    i =0
-    select=[]
-    while i < array.length
-      if yield(array[i])
-        select << array[i]
-      end
+    i = 0
+    selection=[]
+    while i < array.length #needed help to push the instance being yielded into the array
+        if yield(array[i]) == true
+          selection << (array[i])
+        end # NEEDED TO ADD END STATEMENT FOR IF .. END
       i += 1
     end
-  select
+  selection
 end
-#my_select(nums)
+
+# def my_select(array)
+# count = 0
+# result = []
+#
+# while count < array.size
+#   if yield(array[count]) == true
+#   result.push(array[count])
+# end
+#   count+=1
+# end
+# result
+# end
+
+# def my_collect(array)
+#   i = 0
+#   collection =[] #  new array to store our collection
+#   while i < array.length
+#     collection << yield(array[i]) # needed help here - take the instance and add to new array
+#     i=i+1
+#   end
+# collection
+# end
