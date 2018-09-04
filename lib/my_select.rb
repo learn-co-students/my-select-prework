@@ -4,7 +4,7 @@ def my_select(collection)
   selection = []
   while i < collection.length
     #how can i check if the block condition will evaluate to true?
-    if yield(collection[i]) == true
+    if yield(collection[i])
        selection << yield(collection[i])
      end
     i += 1
