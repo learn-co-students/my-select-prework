@@ -1,7 +1,7 @@
  def my_select(array, &block)
-    result =[]
+    new_array =[]
     array.each do |element|
-      result << element if block.call(element) == true
+      new_array << element if block.call(element) == true
     end
-    result
+    new_array
   end
