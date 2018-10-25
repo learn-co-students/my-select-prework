@@ -1,3 +1,7 @@
 def my_select(collection)
- # your code here!
+  temp = []
+  collection.each do |el|
+    temp << el if yield(el)
+  end
+  temp
 end
